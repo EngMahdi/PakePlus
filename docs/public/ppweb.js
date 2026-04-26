@@ -57,7 +57,7 @@ const initNotes = async () => {
     const contentValue = isChinese ? ppnotesJsonData.zh : ppnotesJsonData.en
     const titleValue = isChinese ? 'PackPlus公告' : 'PakePlus Notice'
     const okTextValue = isChinese ? '确定' : 'OK'
-    if (ppnotesJsonData.show) {
+    if (ppnotesJsonData.webShow) {
         createNotes(
             titleValue,
             contentValue,
