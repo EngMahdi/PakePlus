@@ -1,5 +1,5 @@
 ---
-title: PakePlus
+title: PakePlus官网
 titleTemplate: 网站秒变桌面应用和手机应用 | 开源免费
 layout: home
 
