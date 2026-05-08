@@ -354,10 +354,20 @@
         </div>
         <!-- last release -->
         <div class="lastRelease">
-            <span>{{ langMap[lang].lastRelease }} {{ lastRelease.name }}</span>
+            <!-- <span>{{ langMap[lang].lastRelease }} {{ lastRelease.name }}</span> -->
             <span>
                 {{ langMap[lang].lastTime }}
                 {{ lastRelease.published_at }}
+            </span>
+            <span>
+                {{ langMap[lang].history }}
+                <a
+                    href="https://github.com/Sjj1024/PakePlus/releases"
+                    target="_blank"
+                    class="githubLink"
+                >
+                    Releases Page
+                </a>
             </span>
         </div>
     </div>
@@ -376,6 +386,7 @@ const langMap = {
         titleTips: 'PakePlus',
         lastRelease: '最后发布：',
         lastTime: '最后时间：',
+        history: '历史版本：',
         notRecommended: '不推荐，因为是 beta 版本，且功能没有客户端版本完善',
         mostPopular: '最流行：',
         oldSystem: '老系统：',
@@ -394,6 +405,7 @@ const langMap = {
         titleTips: 'PakePlus',
         lastRelease: 'Last Release: ',
         lastTime: 'Last Time: ',
+        history: 'History: ',
         notRecommended:
             "Not recommended, it's a beta version，and the function is not as complete as the client version",
         mostPopular: 'Most Popular: ',
@@ -849,18 +861,6 @@ const proxyGithub = (url, type = 1) => {
                 gap: 10px;
                 font-size: 1rem;
 
-                a {
-                    color: var(--vp-c-brand-1);
-                    transition: all 0.2s ease;
-                    min-width: 150px;
-
-                    &:hover {
-                        // color: rgb(58, 58, 254);
-                        font-weight: bold;
-                        transform: translateY(-2px);
-                    }
-                }
-
                 .githubLink {
                     margin-left: 20px;
                 }
@@ -881,6 +881,18 @@ const proxyGithub = (url, type = 1) => {
         font-size: 14px;
         color: var(--vp-c-text-2);
         gap: 10px;
+    }
+}
+
+a {
+    color: var(--vp-c-brand-1);
+    transition: all 0.2s ease;
+    min-width: 150px;
+
+    &:hover {
+        // color: rgb(58, 58, 254);
+        font-weight: bold;
+        transform: translateY(-2px);
     }
 }
 </style>
